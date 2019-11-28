@@ -650,6 +650,9 @@ a:hover {
   .article h2 {
     font-size: 1.25em;
   }
+  .recent h2 {
+    font-size: 1.375em;
+  }
   .timeline h2 {
     font-size: 1.25em;
   }
