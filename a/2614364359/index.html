@@ -1,1 +1,96 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta http-equiv="Cache-Control" content="no-siteapp"><title>Service Worker 中文排版的最佳实践 | 如是</title><link rel="stylesheet" href="/css/style.css"><meta name="generator" content="Hexo 4.0.0"></head><body><header class="header"><div class="container"><nav class="nav"><ul><li class="nav-item"><a href="/">首页</a></li><li class="nav-item">正文</li></ul></nav></div></header><main class="main"><div class="container"><section class="content"><article class="article"><h1>Service Worker 中文排版的最佳实践</h1><p>丰富的离线体验，定期的后台同步，推送通知，这些通常<mark>需要一个本地应用程序才能实现的功能</mark>现在已经来到了需要一个本地应用程序才能实现的功能现在已经来到了 web 端。以上这些特性背后所依赖的技术都会通过 service worker 提供。</p><h2 id="不一样的标点符号"><a href="#不一样的标点符号" class="headerlink" title="不一样的标点符号"></a>不一样的标点符号</h2><p>这个 API 会让人兴奋的原因是，它允许你提供离线体验，而且是开发人员完全可控的离线体验。</p><ul><li>标点符号与繁体中文不符</li><li>有一些繁体字体没有包含在 Adobe Japan 1-6 中，很多都是简体的；降级后你的文章看起来就像是一封加密的邮件</li><li>漢字(Hanzi/Kanji) 在日本、中国、台湾/香港以及越南都有用，但是它们是不一样的</li><li>Service worker 是一个可编程的网络代理，允许你去控制如何处理页面的网络请求</li></ul><p>当我们安装后，会开始激活步骤。<abbr title="Service Worker ">SW</abbr> 升级的这个过程也是一个很好的机会来处理老的缓存。</p><ol><li>标点符号与繁体中文不符</li><li>有一些繁体字体没有包含在 Adobe Japan 1-6 中，很多都是简体的；降级后你的文章看起来就像是一封加密的邮件</li><li><del>漢字</del><ins>汉字</ins>(Hanzi/Kanji) 在日本、_中国_、<u>台湾</u>、<u>香港</u>以及越南都有用，但是它们是不一样的</li><li>Service worker 是一个可编程的网络代理，允许你去控制如何处理页面的网络请求</li></ol><p>由于某些原因，台湾和香港的繁体中文阅读者一点都不喜欢阅读简体中文，反过来，大陆的中国人阅读起繁体也很吃力。</p><blockquote><p>绿草苍苍，白雾茫茫，<br>有位佳人，在水一方。<br>绿草萋萋，白雾迷离，<br>有位佳人，靠水而居。<br>我愿逆流而上，依偎在她身旁。<br>无奈前有险滩，道路又远又长。<br>我愿顺流而下，找寻她的方向。<br>却见依稀仿佛，她在水的中央。<br>我愿逆流而上，与她轻言细语。<br>无奈前有险滩，道路曲折无已。<br>我愿顺流而下，找寻她的足迹。<br>却见仿佛依稀，她在水中伫立。<br>绿草苍苍，白雾茫茫，<br>有位佳人，在水一方。</p><footer><strong>琼瑶</strong><cite>在水一方</cite></footer></blockquote><p>我把 OS X / iOS / Windows 以及 Android 的系统字体列在下面，方便你选择正确的字体，某些字体在老版的系统或者 iOS App 中并没有，你需要做一些<a href="https://rushi.pub/" title="额外的工作">额外的工作</a>，从 Apple 下载它们。</p><p><img src="http://pic1.zhimg.com/739a2c5386de65050513f661224688ac_b.jpg" alt="张小盒" title="张小盒"></p><figure><figcaption>黄浦江上的的卢浦大桥</figcaption><img src="http://pic2.zhimg.com/0a83ea9c4499f02a42254856e4547a0d_b.jpg"></figure><p>这是一种古老的中文或自印刷（木制的）！暗示了<em>中文排版</em>的重要原则：所有的字符都是方形的。</p><p>但是到了 20 世纪，<strong>标点符号</strong>被用在出版业中。而且现代的<b>桌面出版</b>工具采用了源自日本的“prohibition rules(禁則處理)”，不允许句号、逗号等等出现在行首。而且要求英文单词不可以截断。因此我们无法保证所有东西都是横竖对齐的。但是至少，我们可以保证行的开始和结束可以对齐。这也是为什么 justify 对于电子书或者长文重要的原因。</p><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">evictResultSetCache</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">    AbstractSqlExecutor $executor,</span></span></span><br><span class="line"><span class="function"><span class="params">    array $sqlParams,</span></span></span><br><span class="line"><span class="function"><span class="params">    array $types,</span></span></span><br><span class="line"><span class="function"><span class="params">    array $connectionParams</span></span></span><br><span class="line"><span class="function"><span class="params">)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">$this</span>-&gt;queryCacheProfile === <span class="keyword">null</span> || ! <span class="keyword">$this</span>-&gt;getExpireResultCache()) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    $cacheDriver = <span class="keyword">$this</span>-&gt;queryCacheProfile-&gt;getResultCacheDriver();</span><br><span class="line">    $statements  = (<span class="keyword">array</span>) $executor-&gt;getSqlStatements(); <span class="comment">// Type casted since it can either be a string or an array</span></span><br><span class="line">    <span class="keyword">foreach</span> ($statements <span class="keyword">as</span> $statement) &#123;</span><br><span class="line">        $cacheKeys = <span class="keyword">$this</span>-&gt;queryCacheProfile-&gt;generateCacheKeys($statement, $sqlParams, $types, $connectionParams);</span><br><span class="line">        $cacheDriver-&gt;delete(reset($cacheKeys));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="他就卡过看过"><a href="#他就卡过看过" class="headerlink" title="他就卡过看过"></a>他就卡过看过</h2><p>为什么不让我描述一下 JSON 模式的数据然后使得它在客户端以及服务端验证上变得都很容易呢？我期待看到它可以变得更简单。</p><h3 id="实现一个想法的原型"><a href="#实现一个想法的原型" class="headerlink" title="实现一个想法的原型"></a>实现一个想法的原型</h3><p>在去年，这是一个很火的话题（比如，nobackend.org），不过现在有些平息了。不过 观点本身在 Firebase、Hoddie、Backendless 等技术下依旧很强势。我认为这对仅仅熟悉前端的开发者来说是一件好事，可以不需要后端就完成一个完整的应用。这样，很多开发者都可以轻易地创建一个应用的前后端，这提供了更简洁的方式来实现一个想法的原型。</p><h4 id="这一步的方向很正确。"><a href="#这一步的方向很正确。" class="headerlink" title="这一步的方向很正确。"></a>这一步的方向很正确。</h4><p>客户端 MVC 正沿正确的方向快速前进。我确信在这点上服务端 API 正在落后。目前，还没有一个开发者共同遵循的既定的规范，当创建 RESTFul API 的时候客户端数据模型和集合很难高效的获取数据。</p><h4 id="客户端校验"><a href="#客户端校验" class="headerlink" title="客户端校验"></a>客户端校验</h4><p>简单的答案就是参阅 ngmodules.org 这一类站点，有很多开发者反复地在这里寻求答案。任何前端有关的框架都会涉及到 HTML/CSS 框架（像 Bootstrap），文件上传、国际化、本土化等等。如果成百上千的开发者都去探索它，在使用它上面花时间，你也就不用担心社区分享的问题。这是简单的答案，不过实际上还应该有这样两件事，校验以及没有后端。</p><h3 id="这样确实带来了很多便利。"><a href="#这样确实带来了很多便利。" class="headerlink" title="这样确实带来了很多便利。"></a>这样确实带来了很多便利。</h3><p>有很多页面需要与其他页面上的时间对比以确定它们是否在恰当的场景下出现，有些不可控因素也对其有很多限制。我们将数据通过 API 发送到服务端，将严格验证的数据返回，因为你不能依赖客户端的验证。我们的后算不是用 JavaScript 语言编写的，所以我们没办法使用同一个代码库来验证，因而就需要用不同的语言写相同的逻辑，对某些边缘情况会出现犯同样的错误的可能。</p></article><nav class="pagination"><div class="prev"><a href="/a/4030906618/">凡是使人嗟叹此世只是一梦的，于我都是可亲的</a></div><div class="placeholder"></div></nav></section></div></main><footer class="footer"><div class="container"><p class="copyright"><small>&copy; 2019. 由 <a href="https://hexo.io" target="_blank">Hexo</a> 强力驱动.</small></p></div></footer></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>Service Worker 中文排版的最佳实践 | 如是</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+    <ul>
+        
+            <li class="nav-item"><a href="/">首页</a></li>
+            <li class="nav-item">正文</li>
+        
+    </ul>
+</nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <section class="content">
+  <article class="article">
+    <h1>Service Worker 中文排版的最佳实践</h1>
+    <p>丰富的离线体验，定期的后台同步，推送通知，这些通常<mark>需要一个本地应用程序才能实现的功能</mark>现在已经来到了需要一个本地应用程序才能实现的功能现在已经来到了 web 端。以上这些特性背后所依赖的技术都会通过 service worker 提供。</p>
+<h2 id="不一样的标点符号"><a href="#不一样的标点符号" class="headerlink" title="不一样的标点符号"></a>不一样的标点符号</h2><p>这个 API 会让人兴奋的原因是，它允许你提供离线体验，而且是开发人员完全可控的离线体验。</p>
+<ul>
+<li>标点符号与繁体中文不符</li>
+<li>有一些繁体字体没有包含在 Adobe Japan 1-6 中，很多都是简体的；降级后你的文章看起来就像是一封加密的邮件</li>
+<li>漢字(Hanzi/Kanji) 在日本、中国、台湾/香港以及越南都有用，但是它们是不一样的</li>
+<li>Service worker 是一个可编程的网络代理，允许你去控制如何处理页面的网络请求</li>
+</ul>
+<p>当我们安装后，会开始激活步骤。<abbr title="Service Worker ">SW</abbr> 升级的这个过程也是一个很好的机会来处理老的缓存。</p>
+<ol>
+<li>标点符号与繁体中文不符</li>
+<li>有一些繁体字体没有包含在 Adobe Japan 1-6 中，很多都是简体的；降级后你的文章看起来就像是一封加密的邮件</li>
+<li><del>漢字</del><ins>汉字</ins>(Hanzi/Kanji) 在日本、_中国_、<u>台湾</u>、<u>香港</u>以及越南都有用，但是它们是不一样的</li>
+<li>Service worker 是一个可编程的网络代理，允许你去控制如何处理页面的网络请求</li>
+</ol>
+<p>由于某些原因，台湾和香港的繁体中文阅读者一点都不喜欢阅读简体中文，反过来，大陆的中国人阅读起繁体也很吃力。</p>
+<blockquote><p>绿草苍苍，白雾茫茫，<br>有位佳人，在水一方。<br>绿草萋萋，白雾迷离，<br>有位佳人，靠水而居。<br>我愿逆流而上，依偎在她身旁。<br>无奈前有险滩，道路又远又长。<br>我愿顺流而下，找寻她的方向。<br>却见依稀仿佛，她在水的中央。<br>我愿逆流而上，与她轻言细语。<br>无奈前有险滩，道路曲折无已。<br>我愿顺流而下，找寻她的足迹。<br>却见仿佛依稀，她在水中伫立。<br>绿草苍苍，白雾茫茫，<br>有位佳人，在水一方。</p>
+<footer><strong>琼瑶</strong><cite>在水一方</cite></footer></blockquote>
+
+<p>我把 OS X / iOS / Windows 以及 Android 的系统字体列在下面，方便你选择正确的字体，某些字体在老版的系统或者 iOS App 中并没有，你需要做一些<a href="https://rushi.pub/" title="额外的工作">额外的工作</a>，从 Apple 下载它们。</p>
+<p><img src="http://pic1.zhimg.com/739a2c5386de65050513f661224688ac_b.jpg" alt="张小盒" title="张小盒"></p>
+<figure>
+    <figcaption>黄浦江上的的卢浦大桥</figcaption>
+        <img src="http://pic2.zhimg.com/0a83ea9c4499f02a42254856e4547a0d_b.jpg" />
+</figure>
+
+<p>这是一种古老的中文或自印刷（木制的）！暗示了<em>中文排版</em>的重要原则：所有的字符都是方形的。</p>
+<p>但是到了 20 世纪，<strong>标点符号</strong>被用在出版业中。而且现代的<b>桌面出版</b>工具采用了源自日本的“prohibition rules(禁則處理)”，不允许句号、逗号等等出现在行首。而且要求英文单词不可以截断。因此我们无法保证所有东西都是横竖对齐的。但是至少，我们可以保证行的开始和结束可以对齐。这也是为什么 justify 对于电子书或者长文重要的原因。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">evictResultSetCache</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">    AbstractSqlExecutor $executor,</span></span></span><br><span class="line"><span class="function"><span class="params">    array $sqlParams,</span></span></span><br><span class="line"><span class="function"><span class="params">    array $types,</span></span></span><br><span class="line"><span class="function"><span class="params">    array $connectionParams</span></span></span><br><span class="line"><span class="function"><span class="params">)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">$this</span>-&gt;queryCacheProfile === <span class="keyword">null</span> || ! <span class="keyword">$this</span>-&gt;getExpireResultCache()) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    $cacheDriver = <span class="keyword">$this</span>-&gt;queryCacheProfile-&gt;getResultCacheDriver();</span><br><span class="line">    $statements  = (<span class="keyword">array</span>) $executor-&gt;getSqlStatements(); <span class="comment">// Type casted since it can either be a string or an array</span></span><br><span class="line">    <span class="keyword">foreach</span> ($statements <span class="keyword">as</span> $statement) &#123;</span><br><span class="line">        $cacheKeys = <span class="keyword">$this</span>-&gt;queryCacheProfile-&gt;generateCacheKeys($statement, $sqlParams, $types, $connectionParams);</span><br><span class="line">        $cacheDriver-&gt;delete(reset($cacheKeys));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="他就卡过看过"><a href="#他就卡过看过" class="headerlink" title="他就卡过看过"></a>他就卡过看过</h2><p>为什么不让我描述一下 JSON 模式的数据然后使得它在客户端以及服务端验证上变得都很容易呢？我期待看到它可以变得更简单。</p>
+<h3 id="实现一个想法的原型"><a href="#实现一个想法的原型" class="headerlink" title="实现一个想法的原型"></a>实现一个想法的原型</h3><p>在去年，这是一个很火的话题（比如，nobackend.org），不过现在有些平息了。不过 观点本身在 Firebase、Hoddie、Backendless 等技术下依旧很强势。我认为这对仅仅熟悉前端的开发者来说是一件好事，可以不需要后端就完成一个完整的应用。这样，很多开发者都可以轻易地创建一个应用的前后端，这提供了更简洁的方式来实现一个想法的原型。</p>
+<h4 id="这一步的方向很正确。"><a href="#这一步的方向很正确。" class="headerlink" title="这一步的方向很正确。"></a>这一步的方向很正确。</h4><p>客户端 MVC 正沿正确的方向快速前进。我确信在这点上服务端 API 正在落后。目前，还没有一个开发者共同遵循的既定的规范，当创建 RESTFul API 的时候客户端数据模型和集合很难高效的获取数据。</p>
+<h4 id="客户端校验"><a href="#客户端校验" class="headerlink" title="客户端校验"></a>客户端校验</h4><p>简单的答案就是参阅 ngmodules.org 这一类站点，有很多开发者反复地在这里寻求答案。任何前端有关的框架都会涉及到 HTML/CSS 框架（像 Bootstrap），文件上传、国际化、本土化等等。如果成百上千的开发者都去探索它，在使用它上面花时间，你也就不用担心社区分享的问题。这是简单的答案，不过实际上还应该有这样两件事，校验以及没有后端。</p>
+<h3 id="这样确实带来了很多便利。"><a href="#这样确实带来了很多便利。" class="headerlink" title="这样确实带来了很多便利。"></a>这样确实带来了很多便利。</h3><p>有很多页面需要与其他页面上的时间对比以确定它们是否在恰当的场景下出现，有些不可控因素也对其有很多限制。我们将数据通过 API 发送到服务端，将严格验证的数据返回，因为你不能依赖客户端的验证。我们的后算不是用 JavaScript 语言编写的，所以我们没办法使用同一个代码库来验证，因而就需要用不同的语言写相同的逻辑，对某些边缘情况会出现犯同样的错误的可能。</p>
+
+  </article>
+
+  
+
+  
+    <nav class="pagination">
+      
+        <div class="prev"><a href="/a/4030906618/">凡是使人嗟叹此世只是一梦的，于我都是可亲的</a></div>
+      
+      <div class="placeholder"></div>
+      
+    </nav>
+  
+
+</section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">
+    <small>&copy; 2019. 由 <a href="https://hexo.io" target="_blank">Hexo</a> 强力驱动.</small>
+</p>
+        </div>
+    </footer>
+    <div class="scrollbar"></div>
+    <div class="scrolltop"></div>
+    <script src="/js/laurel.js"></script>
+    <script>
+        var ru = new Rushi();
+    </script>
+</body>
+</html>
