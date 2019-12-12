@@ -1,0 +1,1383 @@
+@charset "UTF-8";
+/* laurel v1.0.0 | by shingchi | rushi.pub */
+/* Hung.css v1.0.0 | by shingchi | rushi.pub */
+@charset "UTF-8";
+html {
+  line-height: 1.15;
+/* 1 */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+/* 2 */
+}
+body {
+  margin: 0;
+}
+main {
+  display: block;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+hr {
+  box-sizing: content-box;
+/* 1 */
+  height: 0;
+/* 1 */
+  overflow: visible;
+/* 2 */
+}
+pre {
+  font-family: monospace, monospace;
+/* 1 */
+  font-size: 1em;
+/* 2 */
+}
+a {
+  background-color: transparent;
+}
+abbr[title] {
+  border-bottom: none;
+/* 1 */
+  text-decoration: underline;
+/* 2 */
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+/* 2 */
+}
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+/* 1 */
+  font-size: 1em;
+/* 2 */
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+img {
+  border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+/* 1 */
+  font-size: 100%;
+/* 1 */
+  line-height: 1.15;
+/* 1 */
+  margin: 0;
+/* 2 */
+}
+button,
+input {
+/* 1 */
+  overflow: visible;
+}
+button,
+select {
+/* 1 */
+  text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+legend {
+  box-sizing: border-box;
+/* 1 */
+  color: inherit;
+/* 2 */
+  display: table;
+/* 1 */
+  max-width: 100%;
+/* 1 */
+  padding: 0;
+/* 3 */
+  white-space: normal;
+/* 1 */
+}
+progress {
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+/* 1 */
+  padding: 0;
+/* 2 */
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+/* 1 */
+  outline-offset: -2px;
+/* 2 */
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+/* 1 */
+  font: inherit;
+/* 2 */
+}
+details {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+@font-face {
+  font-family: 'Hung Heiti';
+  src: local("Hiragino Sans GB"), local("Lantinghei TC Extralight"), local("Lantinghei SC Extralight"), local(FZLTXHB--B51-0), local(FZLTZHK--GBK1-0), local("Pingfang SC Light"), local("Pingfang TC Light"), local("Pingfang-SC-Light"), local("Pingfang-TC-Light"), local("Pingfang SC"), local("Pingfang TC"), local("Heiti SC Light"), local(STHeitiSC-Light), local("Heiti SC"), local("Heiti TC Light"), local(STHeitiTC-Light), local("Heiti TC"), local("Microsoft Yahei"), local("Microsoft Jhenghei"), local("Noto Sans CJK KR"), local("Noto Sans CJK JP"), local("Noto Sans CJK SC"), local("Noto Sans CJK TC"), local("Source Han Sans K"), local("Source Han Sans KR"), local("Source Han Sans JP"), local("Source Han Sans CN"), local("Source Han Sans HK"), local("Source Han Sans TW"), local("Source Han Sans TWHK"), local("Droid Sans Fallback");
+}
+@font-face {
+  unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+  font-family: 'Hung Heiti';
+  src: local(YuGothic), local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro");
+}
+@font-face {
+  font-family: 'Hung Heiti CNS';
+  src: local("Pingfang TC Light"), local("Pingfang-TC-Light"), local("Pingfang TC"), local("Heiti TC Light"), local(STHeitiTC-Light), local("Heiti TC"), local("Lantinghei TC Extralight"), local(FZLTXHB--B51-0), local("Lantinghei TC"), local("Microsoft Jhenghei"), local("Microsoft Yahei"), local("Noto Sans CJK TC"), local("Source Han Sans TC"), local("Source Han Sans TW"), local("Source Han Sans TWHK"), local("Source Han Sans HK"), local("Droid Sans Fallback");
+}
+@font-face {
+  font-family: 'Hung Heiti GB';
+  src: local("Hiragino Sans GB"), local("Pingfang SC Light"), local("Pingfang-SC-Light"), local("Pingfang SC"), local("Lantinghei SC Extralight"), local(FZLTXHK--GBK1-0), local("Lantinghei SC"), local("Heiti SC Light"), local(STHeitiSC-Light), local("Heiti SC"), local("Microsoft Yahei"), local("Noto Sans CJK SC"), local("Source Han Sans SC"), local("Source Han Sans CN"), local("Droid Sans Fallback");
+}
+@font-face {
+  font-family: 'Hung Heiti';
+  font-weight: 600;
+  src: local("Hiragino Sans GB W6"), local(HiraginoSansGB-W6), local("Lantinghei TC Demibold"), local("Lantinghei SC Demibold"), local(FZLTZHB--B51-0), local(FZLTZHK--GBK1-0), local("Pingfang-SC-Semibold"), local("Pingfang-TC-Semibold"), local("Heiti SC Medium"), local("STHeitiSC-Medium"), local("Heiti SC"), local("Heiti TC Medium"), local("STHeitiTC-Medium"), local("Heiti TC"), local("Microsoft Yahei Bold"), local("Microsoft Jhenghei Bold"), local(MicrosoftYahei-Bold), local(MicrosoftJhengHeiBold), local("Microsoft Yahei"), local("Microsoft Jhenghei"), local("Noto Sans CJK KR Bold"), local("Noto Sans CJK JP Bold"), local("Noto Sans CJK SC Bold"), local("Noto Sans CJK TC Bold"), local(NotoSansCJKkr-Bold), local(NotoSansCJKjp-Bold), local(NotoSansCJKsc-Bold), local(NotoSansCJKtc-Bold), local("Source Han Sans K Bold"), local(SourceHanSansK-Bold), local("Source Han Sans K"), local("Source Han Sans KR Bold"), local("Source Han Sans JP Bold"), local("Source Han Sans CN Bold"), local("Source Han Sans HK Bold"), local("Source Han Sans TW Bold"), local("Source Han Sans TWHK Bold"), local("SourceHanSansKR-Bold"), local("SourceHanSansJP-Bold"), local("SourceHanSansCN-Bold"), local("SourceHanSansHK-Bold"), local("SourceHanSansTW-Bold"), local("SourceHanSansTWHK-Bold"), local("Source Han Sans KR"), local("Source Han Sans CN"), local("Source Han Sans HK"), local("Source Han Sans TW"), local("Source Han Sans TWHK");
+}
+@font-face {
+  unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+  font-family: 'Hung Heiti';
+  font-weight: 600;
+  src: local("YuGothic Bold"), local("Hiragino Kaku Gothic ProN W6"), local("Hiragino Kaku Gothic Pro W6"), local(YuGo-Bold), local(HiraKakuProN-W6), local(HiraKakuPro-W6);
+}
+@font-face {
+  font-family: 'Hung Heiti CNS';
+  font-weight: 600;
+  src: local("Pingfang TC Semibold"), local("Pingfang-TC-Semibold"), local("Heiti TC Medium"), local("STHeitiTC-Medium"), local("Heiti TC"), local("Lantinghei TC Demibold"), local(FZLTXHB--B51-0), local("Microsoft Jhenghei Bold"), local(MicrosoftJhengHeiBold), local("Microsoft Jhenghei"), local("Microsoft Yahei Bold"), local(MicrosoftYahei-Bold), local("Noto Sans CJK TC Bold"), local(NotoSansCJKtc-Bold), local("Noto Sans CJK TC"), local("Source Han Sans TC Bold"), local("SourceHanSansTC-Bold"), local("Source Han Sans TC"), local("Source Han Sans TW Bold"), local("SourceHanSans-TW"), local("Source Han Sans TW"), local("Source Han Sans TWHK Bold"), local("SourceHanSans-TWHK"), local("Source Han Sans TWHK"), local("Source Han Sans HK"), local("SourceHanSans-HK"), local("Source Han Sans HK");
+}
+@font-face {
+  font-family: 'Hung Heiti GB';
+  font-weight: 600;
+  src: local("Hiragino Sans GB W6"), local(HiraginoSansGB-W6), local("Pingfang SC Semibold"), local("Pingfang-SC-Semibold"), local("Lantinghei SC Demibold"), local(FZLTZHK--GBK1-0), local("Heiti SC Medium"), local("STHeitiSC-Medium"), local("Heiti SC"), local("Microsoft Yahei Bold"), local(MicrosoftYahei-Bold), local("Microsoft Yahei"), local("Noto Sans CJK SC Bold"), local(NotoSansCJKsc-Bold), local("Noto Sans CJK SC"), local("Source Han Sans SC Bold"), local("SourceHanSansSC-Bold"), local("Source Han Sans CN Bold"), local("SourceHanSansCN-Bold"), local("Source Han Sans SC"), local("Source Han Sans CN");
+}
+@font-face {
+  font-family: 'Hung Songti';
+  src: local("Songti SC Regular"), local(STSongti-SC-Regular), local("Songti SC"), local("Songti TC Regular"), local(STSongti-TC-Regular), local("Songti TC"), local(STSong), local("Lisong Pro"), local(SimSun), local(PMingLiU);
+}
+@font-face {
+  unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+  font-family: 'Hung Songti';
+  src: local(YuMincho), local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("MS Mincho");
+}
+@font-face {
+  font-family: 'Hung Songti CNS';
+  src: local("Songti TC Regular"), local(STSongti-TC-Regular), local("Songti TC"), local("Lisong Pro"), local("Songti SC Regular"), local(STSongti-SC-Regular), local("Songti SC"), local(STSong), local(PMingLiU), local(SimSun);
+}
+@font-face {
+  font-family: 'Hung Songti GB';
+  src: local("Songti SC Regular"), local(STSongti-SC-Regular), local("Songti SC"), local(STSong), local(SimSun), local(PMingLiU);
+}
+@font-face {
+  font-family: 'Hung Songti';
+  font-weight: 600;
+  src: local("STSongti SC Bold"), local("STSongti TC Bold"), local(STSongti-SC-Bold), local(STSongti-TC-Bold), local("STSongti SC"), local("STSongti TC");
+}
+@font-face {
+  unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+  font-family: 'Hung Songti';
+  font-weight: 600;
+  src: local("YuMincho Demibold"), local("Hiragino Mincho ProN W6"), local("Hiragino Mincho Pro W6"), local(YuMin-Demibold), local(HiraMinProN-W6), local(HiraMinPro-W6), local(YuMincho), local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro");
+}
+@font-face {
+  font-family: 'Hung Songti CNS';
+  font-weight: 600;
+  src: local("STSongti TC Bold"), local("STSongti SC Bold"), local(STSongti-TC-Bold), local(STSongti-SC-Bold), local("STSongti TC"), local("STSongti SC");
+}
+@font-face {
+  font-family: 'Hung Songti GB';
+  font-weight: 600;
+  src: local("STSongti SC Bold"), local(STSongti-SC-Bold), local("STSongti SC");
+}
+@font-face {
+  font-family: cursive;
+  src: local("Kaiti TC Regular"), local(STKaiTi-TC-Regular), local("Kaiti TC"), local("Kaiti SC"), local(STKaiti), local(BiauKai), local("標楷體"), local(DFKaiShu-SB-Estd-BF), local(Kaiti), local(DFKai-SB);
+}
+@font-face {
+  unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+  font-family: 'Hung Kaiti';
+  src: local("Kaiti TC Regular"), local(STKaiTi-TC-Regular), local("Kaiti TC"), local("Kaiti SC"), local(STKaiti), local(BiauKai), local("標楷體"), local(DFKaiShu-SB-Estd-BF), local(Kaiti), local(DFKai-SB);
+}
+@font-face {
+  unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+  font-family: 'Hung Kaiti CNS';
+  src: local(BiauKai), local("標楷體"), local(DFKaiShu-SB-Estd-BF), local("Kaiti TC Regular"), local(STKaiTi-TC-Regular), local("Kaiti TC");
+}
+@font-face {
+  unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+  font-family: 'Hung Kaiti GB';
+  src: local("Kaiti SC Regular"), local(STKaiTi-SC-Regular), local("Kaiti SC"), local(STKaiti), local(Kai), local(Kaiti), local(DFKai-SB);
+}
+@font-face {
+  font-family: cursive;
+  font-weight: 600;
+  src: local("Kaiti TC Bold"), local(STKaiTi-TC-Bold), local("Kaiti SC Bold"), local(STKaiti-SC-Bold), local("Kaiti TC"), local("Kaiti SC");
+}
+@font-face {
+  font-family: 'Hung Kaiti';
+  font-weight: 600;
+  src: local("Kaiti TC Bold"), local(STKaiTi-TC-Bold), local("Kaiti SC Bold"), local(STKaiti-SC-Bold), local("Kaiti TC"), local("Kaiti SC");
+}
+@font-face {
+  font-family: 'Hung Kaiti CNS';
+  font-weight: 600;
+  src: local("Kaiti TC Bold"), local(STKaiTi-TC-Bold), local("Kaiti TC");
+}
+@font-face {
+  font-family: 'Hung Kaiti GB';
+  font-weight: 600;
+  src: local("Kaiti SC Bold"), local(STKaiti-SC-Bold);
+}
+@font-face {
+  unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+  font-family: 'Hung Fangsong';
+  src: local(STFangsong), local(FangSong);
+}
+@font-face {
+  unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+  font-family: 'Hung Fangsong CNS';
+  src: local(STFangsong), local(FangSong);
+}
+@font-face {
+  unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+  font-family: 'Hung Fangsong GB';
+  src: local(STFangsong), local(FangSong);
+}
+@font-face {
+  font-family: 'Biaodian Sans';
+  src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local("MS Gothic"), local(SimSun);
+  unicode-range: U+FF0E;
+}
+@font-face {
+  font-family: 'Biaodian Serif';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local(STSong), local(SimSun);
+  unicode-range: U+FF0E;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans';
+  src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local("MS Gothic"), local(SimSun);
+  unicode-range: U+FF0E;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local(STSong), local(SimSun);
+  unicode-range: U+FF0E;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans CNS';
+  src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local("MS Gothic"), local(SimSun);
+  unicode-range: U+FF0E;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif CNS';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local(STSong), local(SimSun);
+  unicode-range: U+FF0E;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans GB';
+  src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local("MS Gothic"), local(SimSun);
+  unicode-range: U+FF0E;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif GB';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local(STSong), local(SimSun);
+  unicode-range: U+FF0E;
+}
+@font-face {
+  font-family: 'Biaodian Sans';
+  src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local(SimSun);
+  unicode-range: U+00B7;
+}
+@font-face {
+  font-family: 'Biaodian Serif';
+  src: local("Songti SC"), local(STSong), local("Heiti SC"), local(SimSun);
+  unicode-range: U+00B7;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans';
+  src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local(SimSun);
+  unicode-range: U+00B7;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif';
+  src: local("Songti SC"), local(STSong), local("Heiti SC"), local(SimSun);
+  unicode-range: U+00B7;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans CNS';
+  src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local(SimSun);
+  unicode-range: U+00B7;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif CNS';
+  src: local("Songti SC"), local(STSong), local("Heiti SC"), local(SimSun);
+  unicode-range: U+00B7;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans GB';
+  src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local(SimSun);
+  unicode-range: U+00B7;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif GB';
+  src: local("Songti SC"), local(STSong), local("Heiti SC"), local(SimSun);
+  unicode-range: U+00B7;
+}
+@font-face {
+  font-family: 'Biaodian Sans';
+  src: local("Hiragino Sans GB"), local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local("Microsoft Yahei"), local(SimSun);
+  unicode-range: U+2014;
+}
+@font-face {
+  font-family: 'Biaodian Serif';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local(STSong), local("Microsoft Yahei"), local(SimSun);
+  unicode-range: U+2014;
+}
+@font-face {
+  font-family: 'Yakumono Sans';
+  src: local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local("Arial Unicode MS"), local("MS Gothic");
+  unicode-range: U+2014;
+}
+@font-face {
+  font-family: 'Yakumono Serif';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("MS Mincho"), local("Microsoft Yahei");
+  unicode-range: U+2014;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans';
+  src: local("Hiragino Sans GB"), local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local("Microsoft Yahei"), local(SimSun);
+  unicode-range: U+2014;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local(STSong), local("Microsoft Yahei"), local(SimSun);
+  unicode-range: U+2014;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans CNS';
+  src: local("Hiragino Sans GB"), local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local("Microsoft Yahei"), local(SimSun);
+  unicode-range: U+2014;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif CNS';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local(STSong), local("Microsoft Yahei"), local(SimSun);
+  unicode-range: U+2014;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans GB';
+  src: local("Hiragino Sans GB"), local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local("Microsoft Yahei"), local(SimSun);
+  unicode-range: U+2014;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif GB';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local(STSong), local("Microsoft Yahei"), local(SimSun);
+  unicode-range: U+2014;
+}
+@font-face {
+  font-family: 'Biaodian Sans';
+  src: local("Hiragino Sans GB"), local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local(Meiryo), local("MS Gothic"), local(SimSun), local(PMingLiU);
+  unicode-range: U+2026;
+}
+@font-face {
+  font-family: 'Biaodian Serif';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local("MS Mincho"), local(SimSun), local(PMingLiU);
+  unicode-range: U+2026;
+}
+@font-face {
+  font-family: 'Yakumono Sans';
+  src: local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local(Meiryo), local("MS Gothic");
+  unicode-range: U+2026;
+}
+@font-face {
+  font-family: 'Yakumono Serif';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("MS Mincho");
+  unicode-range: U+2026;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans';
+  src: local("Hiragino Sans GB"), local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local(SimSun), local(PMingLiU);
+  unicode-range: U+2026;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local(SimSun), local(PMingLiU);
+  unicode-range: U+2026;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans CNS';
+  src: local("Hiragino Sans GB"), local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local(SimSun), local(PMingLiU);
+  unicode-range: U+2026;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif CNS';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local(STSongti), local(SimSun), local(PMingLiU);
+  unicode-range: U+2026;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans GB';
+  src: local("Hiragino Sans GB"), local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local(SimSun), local(PMingLiU);
+  unicode-range: U+2026;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif GB';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local(STSongti), local(SimSun), local(PMingLiU);
+  unicode-range: U+2026;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans GB';
+  src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local(SimSun), local(PMingLiU);
+  unicode-range: U+201C-201D, U+2018-2019;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans GB';
+  font-weight: bold;
+  src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local(SimSun), local(PMingLiU);
+  unicode-range: U+201C-201D, U+2018-2019;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif GB';
+  src: local("Lisong Pro"), local("Heiti SC"), local(STHeiti), local(SimSun), local(PMingLiU);
+  unicode-range: U+201C-201D, U+2018-2019;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif GB';
+  font-weight: bold;
+  src: local("Lisong Pro"), local("Heiti SC"), local(STHeiti), local(SimSun), local(PMingLiU);
+  unicode-range: U+201C-201D, U+2018-2019;
+}
+@font-face {
+  font-family: 'Biaodian Sans';
+  src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+  unicode-range: U+25CF;
+}
+@font-face {
+  font-family: 'Biaodian Serif';
+  src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+  unicode-range: U+25CF;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans';
+  src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+  unicode-range: U+25CF;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif';
+  src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+  unicode-range: U+25CF;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans CNS';
+  src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+  unicode-range: U+25CF;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif CNS';
+  src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+  unicode-range: U+25CF;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans GB';
+  src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+  unicode-range: U+25CF;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif GB';
+  src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+  unicode-range: U+25CF;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans';
+  src: local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local("MS Gothic");
+  unicode-range: U+3002, U+FF0C, U+3001, U+FF1B, U+FF1A, U+FF1F, U+FF01, U+FF0D, U+FF0F, U+FF3C;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("MS Mincho");
+  unicode-range: U+3002, U+FF0C, U+3001, U+FF1B, U+FF1A, U+FF1F, U+FF01, U+FF0D, U+FF0F, U+FF3C;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans CNS';
+  src: local("Heiti TC"), local("Lihei Pro"), local("Microsoft Jhenghei"), local(PMingLiU);
+  unicode-range: U+3002, U+FF0C, U+3001;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans CNS';
+  src: local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local("Heiti TC"), local("Lihei Pro"), local("Microsoft Jhenghei"), local(PMingLiU), local("MS Gothic");
+  unicode-range: U+FF1B, U+FF1A, U+FF1F, U+FF01;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans CNS';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("MS Mincho");
+  unicode-range: U+FF0D, U+FF0F, U+FF3C;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif CNS';
+  src: local(STSongti-TC-Regular), local("Lisong Pro"), local("Heiti TC"), local(PMingLiU);
+  unicode-range: U+3002, U+FF0C, U+3001;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif CNS';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local(PMingLiU), local("MS Mincho");
+  unicode-range: U+FF1B, U+FF1A, U+FF1F, U+FF01, U+FF0D, U+FF0F, U+FF3C;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans GB';
+  src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local(SimSun), local("MS Gothic");
+  unicode-range: U+3002, U+FF0C, U+3001, U+FF1B, U+FF1A, U+FF1F, U+FF01, U+FF0D, U+FF0F, U+FF3C;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif GB';
+  src: local("Songti SC"), local(STSongti), local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local(SimSun), local("MS Mincho");
+  unicode-range: U+3002, U+FF0C, U+3001, U+FF1B, U+FF1A, U+FF1F, U+FF01;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif GB';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local(PMingLiU), local("MS Mincho");
+  unicode-range: U+FF0D, U+FF0F, U+FF3C;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans';
+  src: local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local("Yu Gothic"), local(YuGothic), local(SimSun), local(PMingLiU);
+  unicode-range: U+300C-300F, U+300A-300B, U+3008-3009, U+FF08-FF09, U+3014-3015;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Yu Mincho"), local(YuMincho), local(SimSun), local(PMingLiU);
+  unicode-range: U+300C-300F, U+300A-300B, U+3008-3009, U+FF08-FF09, U+3014-3015;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans CNS';
+  src: local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local("Yu Gothic"), local(YuGothic), local(SimSun), local(PMingLiU);
+  unicode-range: U+300C-300F, U+300A-300B, U+3008-3009, U+FF08-FF09, U+3014-3015;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif CNS';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Yu Mincho"), local(YuMincho), local(SimSun), local(PMingLiU);
+  unicode-range: U+300C-300F, U+300A-300B, U+3008-3009, U+FF08-FF09, U+3014-3015;
+}
+@font-face {
+  font-family: 'Biaodian Pro Sans GB';
+  src: local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro"), local("Yu Gothic"), local(YuGothic), local(SimSun), local(PMingLiU);
+  unicode-range: U+300C-300F, U+300A-300B, U+3008-3009, U+FF08-FF09, U+3014-3015;
+}
+@font-face {
+  font-family: 'Biaodian Pro Serif GB';
+  src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Yu Mincho"), local(YuMincho), local(SimSun), local(PMingLiU);
+  unicode-range: U+300C-300F, U+300A-300B, U+3008-3009, U+FF08-FF09, U+3014-3015;
+}
+@font-face {
+  unicode-range: U+0030-0039;
+  font-family: 'Numeral TF Sans';
+  src: local(Skia), local("Neutraface 2 Text"), local(Candara), local(Corbel);
+}
+@font-face {
+  unicode-range: U+0030-0039;
+  font-family: 'Numeral TF Serif';
+  src: local(Georgia), local("Hoefler Text"), local("Big Caslon");
+}
+@font-face {
+  unicode-range: U+0030-0039;
+  font-family: 'Numeral TF Italic Serif';
+  src: local("Georgia Italic"), local("Hoefler Text Italic"), local(Georgia-Italic), local(HoeflerText-Italic);
+}
+@font-face {
+  unicode-range: U+0030-0039;
+  font-family: 'Numeral LF Sans';
+  src: local("Helvetica Neue"), local(Helvetica), local(Arial);
+}
+@font-face {
+  unicode-range: U+0030-0039;
+  font-family: 'Numeral LF Italic Sans';
+  src: local("Helvetica Neue Italic"), local("Helvetica Oblique"), local("Arial Italic"), local(HelveticaNeue-Italic), local(Helvetica-LightOblique), local(Arial-ItalicMT);
+}
+@font-face {
+  unicode-range: U+0030-0039;
+  font-family: 'Numeral LF Italic Sans';
+  font-weight: bold;
+  src: local("Helvetica Neue Bold Italic"), local("Helvetica Bold Oblique"), local("Arial Bold Italic"), local(HelveticaNeue-BoldItalic), local(Helvetica-BoldOblique), local(Arial-BoldItalicMT);
+}
+@font-face {
+  unicode-range: U+0030-0039;
+  font-family: 'Numeral LF Serif';
+  src: local(Palatino), local("Palatino Linotype"), local("Times New Roman");
+}
+@font-face {
+  unicode-range: U+0030-0039;
+  font-family: 'Numeral LF Italic Serif';
+  src: local("Palatino Italic"), local("Palatino Italic Linotype"), local("Times New Roman Italic"), local(Palatino-Italic), local(Palatino-Italic-Linotype), local(TimesNewRomanPS-ItalicMT);
+}
+@font-face {
+  unicode-range: U+0030-0039;
+  font-family: 'Numeral LF Italic Serif';
+  font-weight: bold;
+  src: local("Palatino Bold Italic"), local("Palatino Bold Italic Linotype"), local("Times New Roman Bold Italic"), local(Palatino-BoldItalic), local(Palatino-BoldItalic-Linotype), local(TimesNewRomanPS-BoldItalicMT);
+}
+ol,
+ul {
+  padding-left: 2em;
+}
+ul {
+  list-style-type: square;
+}
+ul ul {
+  list-style-type: disc;
+}
+ul ul ul {
+  list-style-type: circle;
+}
+blockquote,
+figure {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+blockquote {
+  font-family: "Biaodian Pro Serif GB", "Numeral LF Serif", Georgia, "Times New Roman", "Hung Kaiti GB", cursive, serif;
+/* footer:before {
+    content: '\2014\2014'; // \2e3a
+    margin-right: $HUNG-ADJACENT-SPACE;
+  } */
+}
+figure {
+  text-align: center;
+  vertical-align: top;
+}
+address {
+  font-style: inherit;
+}
+pre {
+  overflow: auto;
+  white-space: pre;
+  word-wrap: normal;
+}
+a {
+  text-decoration: inherit;
+}
+em {
+  -webkit-text-emphasis: filled circle;
+  text-emphasis: filled circle;
+  -webkit-text-emphasis-position: under;
+  text-emphasis-position: under right;
+  font-style: inherit;
+}
+dfn {
+  font-style: inherit;
+  font-weight: bolder;
+}
+cite {
+  font-style: inherit;
+}
+cite:before {
+  content: '\300a';
+}
+cite:after {
+  content: '\300b';
+}
+q {
+  quotes: '\201c' '\201d' '\2018' '\2019' '\201c' '\201d' '\2018' '\2019' '\201c' '\201d' '\2018' '\2019';
+}
+q:lang(zh-Hant) {
+  quotes: '\300c' '\300d' '\300e' '\300f' '\300c' '\300d' '\300e' '\300f' '\300c' '\300d' '\300e' '\300f';
+}
+q:before {
+  content: open-quote;
+}
+q:after {
+  content: close-quote;
+}
+code,
+kbd,
+samp,
+pre {
+  font-family: "Biaodian Pro Sans GB", Menlo, Consolas, Courier, "Hung Heiti GB", monospace, monospace, sans-serif;
+}
+i,
+var {
+  font-style: inherit;
+  font-family: "Biaodian Pro Serif GB", "Numeral LF Serif", Georgia, "Times New Roman", "Hung Kaiti GB", cursive, serif;
+}
+u,
+ins {
+  padding-bottom: 0.05em;
+  border-bottom: 1px solid;
+  text-decoration: none;
+}
+u + u,
+u + ins,
+ins + u,
+ins + ins {
+  margin-left: 0.125em;
+}
+s + s,
+s + del,
+del + s,
+del + del {
+  margin-left: 0.125em;
+}
+abbr[title] {
+  padding-bottom: 0.05em;
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+  text-decoration: none;
+  cursor: help;
+}
+article {
+  line-height: 1.7;
+}
+article h1 + h6,
+article h1 + p,
+article h1 + ol,
+article h1 + ul,
+article h1 + blockquote,
+article h1 + table,
+article h1 + figure,
+article h1 + section > h6:first-child,
+article h1 + section > p:first-child,
+article h1 + section > ol:first-child,
+article h1 + section > ul:first-child,
+article h1 + section > blockquote:first-child,
+article h1 + section > table:first-child,
+article h1 + section > figure:first-child,
+article h2 + h6,
+article h2 + p,
+article h2 + ol,
+article h2 + ul,
+article h2 + blockquote,
+article h2 + table,
+article h2 + figure,
+article h2 + section > h6:first-child,
+article h2 + section > p:first-child,
+article h2 + section > ol:first-child,
+article h2 + section > ul:first-child,
+article h2 + section > blockquote:first-child,
+article h2 + section > table:first-child,
+article h2 + section > figure:first-child,
+article h3 + h6,
+article h3 + p,
+article h3 + ol,
+article h3 + ul,
+article h3 + blockquote,
+article h3 + table,
+article h3 + figure,
+article h3 + section > h6:first-child,
+article h3 + section > p:first-child,
+article h3 + section > ol:first-child,
+article h3 + section > ul:first-child,
+article h3 + section > blockquote:first-child,
+article h3 + section > table:first-child,
+article h3 + section > figure:first-child,
+article h4 + h6,
+article h4 + p,
+article h4 + ol,
+article h4 + ul,
+article h4 + blockquote,
+article h4 + table,
+article h4 + figure,
+article h4 + section > h6:first-child,
+article h4 + section > p:first-child,
+article h4 + section > ol:first-child,
+article h4 + section > ul:first-child,
+article h4 + section > blockquote:first-child,
+article h4 + section > table:first-child,
+article h4 + section > figure:first-child,
+article h5 + h6,
+article h5 + p,
+article h5 + ol,
+article h5 + ul,
+article h5 + blockquote,
+article h5 + table,
+article h5 + figure,
+article h5 + section > h6:first-child,
+article h5 + section > p:first-child,
+article h5 + section > ol:first-child,
+article h5 + section > ul:first-child,
+article h5 + section > blockquote:first-child,
+article h5 + section > table:first-child,
+article h5 + section > figure:first-child,
+article h6 + h6,
+article h6 + p,
+article h6 + ol,
+article h6 + ul,
+article h6 + blockquote,
+article h6 + table,
+article h6 + figure,
+article h6 + section > h6:first-child,
+article h6 + section > p:first-child,
+article h6 + section > ol:first-child,
+article h6 + section > ul:first-child,
+article h6 + section > blockquote:first-child,
+article h6 + section > table:first-child,
+article h6 + section > figure:first-child,
+article h1 + h5,
+article h1 + section > h5:first-child,
+article h2 + h5,
+article h2 + section > h5:first-child,
+article h3 + h5,
+article h3 + section > h5:first-child,
+article h4 + h5,
+article h4 + section > h5:first-child,
+article h5 + h5,
+article h5 + section > h5:first-child,
+article h1 + h4,
+article h1 + section > h4:first-child,
+article h2 + h4,
+article h2 + section > h4:first-child,
+article h3 + h4,
+article h3 + section > h4:first-child,
+article h4 + h4,
+article h4 + section > h4:first-child,
+article h1 + h3,
+article h1 + section > h3:first-child,
+article h2 + h3,
+article h2 + section > h3:first-child,
+article h3 + h3,
+article h3 + section > h3:first-child,
+article h1 + h2,
+article h1 + section > h2:first-child,
+article h2 + h2,
+article h2 + section > h2:first-child {
+  margin-top: -1em;
+}
+article li,
+article p {
+  text-align: justify;
+}
+article blockquote {
+  margin-right: 0;
+}
+article img {
+  max-width: 100%;
+}
+hr {
+  height: 1px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-top-width: 0;
+  border-color: #cfcfcf;
+}
+:not(pre) > code {
+  padding: 1px 4px;
+  background-color: #ededed;
+  word-wrap: break-word;
+}
+kbd {
+  padding: 1px 4px;
+  background-color: #ededed;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2), 0 2px 0 0 rgba(255,255,255,0.7) inset;
+  line-height: 1;
+}
+audio:focus,
+video:focus {
+  outline: 0;
+}
+.with-counter {
+  counter-reset: hung-article-h2 hung-article-h3 hung-article-h4;
+}
+.with-counter h2:not(.toc) {
+  counter-reset: hung-article-h3 hung-article-h4;
+}
+.with-counter h2:not(.toc):before {
+  content: counter(hung-article-h2, cjk-ideographic) "、";
+  counter-increment: hung-article-h2;
+}
+.with-counter h3:not(.toc) {
+  counter-reset: hung-article-h4;
+}
+.with-counter h3:not(.toc):before {
+  content: counter(hung-article-h2) "." counter(hung-article-h3) "　";
+  counter-increment: hung-article-h3;
+}
+.with-counter h4:not(.toc):before {
+  content: counter(hung-article-h2) "." counter(hung-article-h3) "." counter(hung-article-h4) "　";
+  counter-increment: hung-article-h4;
+}
+ol.toc {
+  counter-reset: hung-toc-h2 hung-toc-h3 hung-toc-h4;
+}
+ol.toc li {
+  list-style: none;
+}
+ol.toc > li {
+  counter-reset: hung-toc-h3 hung-toc-h4;
+}
+ol.toc > li:before {
+  content: counter(hung-toc-h2, cjk-ideographic) "、";
+  counter-increment: hung-toc-h2;
+}
+ol.toc > li > ol > li {
+  counter-reset: hung-toc-h4;
+}
+ol.toc > li > ol > li:before {
+  margin-right: 0.5em;
+  content: counter(hung-toc-h2) "." counter(hung-toc-h3);
+  counter-increment: hung-toc-h3;
+}
+ol.toc ol ol > li:before {
+  margin-right: 0.5em;
+  content: counter(hung-toc-h2) "." counter(hung-toc-h3) "." counter(hung-toc-h4);
+  counter-increment: hung-toc-h4;
+}
+table {
+  margin-bottom: 1em;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+table th,
+table td {
+  padding: 0.5em 0.75em;
+  border-style: solid;
+  border-color: #dbdbdb;
+  vertical-align: top;
+}
+table th {
+  border-width: 0 0 2px;
+}
+table th:not([align]) {
+  text-align: left;
+}
+table td {
+  border-width: 0 0 1px;
+}
+::selection {
+  color: #fff;
+  background: #617172;
+}
+html {
+  overflow-y: scroll;
+}
+body {
+  background-color: #fff;
+  color: #20484a;
+  font-family: 'Biaodian Pro Sans GB', 'Helvetica Neue', Helvetica, Arial, 'Hung Heiti GB', sans-serif;
+  line-height: 1.7;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: rgba(85,26,139,0.8);
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 1px solid;
+}
+.container {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+  background-color: #fff;
+}
+.nav {
+  padding: 0.5em 0;
+}
+.nav ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.nav li {
+  display: inline-block;
+}
+.nav li.nav-item-actived a {
+  border-bottom: 1px solid;
+}
+.nav li + li:before {
+  content: "\002f";
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  color: #d2d2d2;
+}
+.recent {
+  margin-bottom: 2em;
+}
+.recent h2 {
+  margin-top: 0;
+  line-height: 1;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+.recent h2 a:hover {
+  border-bottom-width: 2px;
+}
+.recent .recent-time {
+  margin-bottom: 0.5em;
+  color: rgba(0,0,0,0.42);
+  font-size: 80%;
+  text-align: inherit;
+}
+.list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.list li:before {
+  content: '\2013';
+  padding-right: 0.5em;
+  color: rgba(85,26,139,0.8);
+  font-weight: bold;
+}
+.read-more {
+  padding-top: 1rem;
+  text-align: center;
+}
+article h1 {
+  margin-top: 0;
+  font-size: 2em;
+  line-height: 1.2;
+  font-weight: bold;
+  text-align: center;
+}
+article figure {
+  position: relative;
+  margin-right: 0;
+  margin-left: 0;
+}
+article figure figcaption {
+  color: rgba(0,0,0,0.42);
+  font-size: 0.875em;
+  font-family: 'Biaodian Pro Serif GB', 'Numeral LF Serif', Georgia, 'Times New Roman', 'Hung Kaiti GB', cursive, serif;
+}
+article figure.highlight {
+  text-align: inherit;
+}
+article pre {
+  padding: 10px;
+  background-color: #f3f5f6;
+  line-height: 1.3;
+  font-size: 14px;
+}
+blockquote footer:before {
+  content: "\2014\2014";
+  margin-right: 0.125em;
+}
+.gimg img {
+  margin-right: 2px;
+  margin-left: 2px;
+}
+.friends,
+.timeline {
+  margin-left: 2em;
+}
+.friends h2 {
+  line-height: 1.2;
+}
+.timeline h2 {
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+.timeline h3 {
+  margin-bottom: 0;
+}
+.timeline a {
+  color: inherit;
+}
+.timeline a:hover {
+  border-bottom: none;
+}
+.timeline-item {
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 2px solid #d2d2d2;
+  transition: 0.3s ease-out;
+}
+.timeline-item:hover {
+  border-left-width: 3px;
+  border-left-color: #1094e8;
+  transform: translateX(3px);
+}
+.timeline-item:hover a {
+  color: #1094e8;
+}
+.timeline-item-time {
+  margin-right: 0.8em;
+  color: rgba(0,0,0,0.42);
+}
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.pagination .placeholder {
+  height: 0;
+}
+.pagination .prev a:before {
+  content: "\00ab";
+  padding-right: 0.5rem;
+}
+.pagination .next a:after {
+  content: "\00bb";
+  padding-left: 0.5rem;
+}
+.cc {
+  color: rgba(0,0,0,0.42);
+  font-size: 80%;
+  text-align: center;
+}
+.cc a {
+  color: inherit;
+}
+.footer {
+  margin-top: 3em;
+  background-color: #617172;
+  color: #ded8cb;
+}
+.footer a {
+  color: inherit;
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1em;
+  }
+  article p {
+    line-height: 2;
+  }
+  .main {
+    min-height: calc(70vh);
+    margin-top: 5em;
+  }
+  article h1 {
+    margin-bottom: 1em;
+  }
+  .footer {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  .pagination {
+    flex-direction: column;
+  }
+  .timeline-item-time {
+    display: none;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .container {
+    max-width: 34em;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 40em;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 769px) {
+  body {
+    font-size: 1.25em;
+  }
+  .main {
+    margin-top: 8em;
+    min-height: calc(50vh);
+  }
+  article h1 {
+    margin-bottom: 2em;
+  }
+  .footer {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+  .footer .copyright {
+    font-size: 0.8em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  article figure figcaption {
+    position: absolute;
+    top: 0;
+    left: -9.5em;
+    width: 8em;
+    line-height: 1.4;
+    text-align: right;
+    letter-spacing: 0.01rem;
+  }
+  article figure figcaption:before {
+    content: "";
+    display: block;
+    width: 25%;
+    margin-bottom: 0.5em;
+    margin-left: 75%;
+    border-top: 1px solid #d2d2d2;
+  }
+}
+.rProgress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.rProgress-bar {
+  height: 2px;
+  border-radius: 3px;
+  background-color: #50bcb6;
+  box-shadow: 0 0 10px #50bcb6;
+  transition: width 0.3s ease;
+}
+.hljs-comment,
+.hljs-quote {
+  color: #abb8c6;
+}
+.hljs-variable,
+.hljs-template-variable,
+.hljs-regexp,
+.hljs-deletion,
+.hljs-keyword,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-tag,
+.hljs-attr {
+  color: #e38800;
+}
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #8d44eb;
+}
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-tag,
+.hljs-attr {
+  color: #e77600;
+}
+.hljs-attribute {
+  color: #108de8;
+}
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #2aab51;
+}
+.hljs-subst,
+.hljs-number {
+  color: #ed6e55;
+}
+.hljs-title,
+.hljs-section,
+.hljs-name {
+  color: #fa3d58;
+}
+.hljs {
+  display: block;
+  overflow-x: auto;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong {
+  font-weight: bold;
+}
+.hljs {
+  position: relative;
+}
+.hljs:hover:before {
+  opacity: 1;
+}
+.hljs:before {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  padding: 3px 5px;
+  border-radius: 3px;
+  background-color: #ccc;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+.css:before {
+  content: 'CSS';
+}
+.html:before {
+  content: 'HTML';
+}
+.javascript:before {
+  content: 'JavaScript';
+}
+.php:before {
+  content: 'PHP';
+}
