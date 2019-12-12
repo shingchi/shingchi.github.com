@@ -1062,9 +1062,6 @@ a:hover {
   padding-left: 0.5em;
   color: #d2d2d2;
 }
-.main {
-  min-height: calc(50vh);
-}
 .recent {
   margin-bottom: 2em;
 }
@@ -1099,7 +1096,6 @@ a:hover {
 }
 article h1 {
   margin-top: 0;
-  margin-bottom: 2em;
   font-size: 2em;
   line-height: 1.2;
   font-weight: bold;
@@ -1204,6 +1200,27 @@ blockquote footer:before {
 .footer a {
   color: inherit;
 }
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1em;
+  }
+  article p {
+    line-height: 2;
+  }
+  .main {
+    min-height: calc(70vh);
+    margin-top: 5em;
+  }
+  article h1 {
+    margin-bottom: 1em;
+  }
+  .pagination {
+    flex-direction: column;
+  }
+  .timeline-item-time {
+    display: none;
+  }
+}
 @media screen and (min-width: 769px) and (max-width: 1023px) {
   .container {
     max-width: 34em;
@@ -1220,29 +1237,16 @@ blockquote footer:before {
     padding-left: 0;
   }
 }
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 1em;
-  }
-  article p {
-    line-height: 2;
-  }
-  .main {
-    margin-top: 5em;
-  }
-  .pagination {
-    flex-direction: column;
-  }
-  .timeline-item-time {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   body {
     font-size: 1.25em;
   }
   .main {
     margin-top: 8em;
+    min-height: calc(50vh);
+  }
+  article h1 {
+    margin-bottom: 2em;
   }
   .footer .copyright {
     font-size: 0.8em;
