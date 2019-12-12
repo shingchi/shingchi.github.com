@@ -1032,7 +1032,8 @@ a:hover {
   border-bottom: 1px solid;
 }
 .container {
-  margin: 0 auto;
+  padding-right: 24px;
+  padding-left: 24px;
 }
 .header {
   position: fixed;
@@ -1203,22 +1204,20 @@ blockquote footer:before {
 .footer a {
   color: inherit;
 }
-@media screen and (max-width: 768px) {
-  .container {
-    padding-right: 24px;
-    padding-left: 24px;
-  }
-}
 @media screen and (min-width: 769px) and (max-width: 1023px) {
   .container {
     max-width: 34em;
-    padding-right: 24px;
-    padding-left: 24px;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 @media screen and (min-width: 1024px) {
   .container {
     max-width: 40em;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 @media screen and (max-width: 768px) {
